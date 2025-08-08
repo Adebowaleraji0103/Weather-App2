@@ -78,11 +78,10 @@ form input {
 .degree {
   display: flex;
   justify-content: center;
-}
-.degree h1 {
-  font-weight: 300px;
+   font-weight: 300px;
   font-size: 70px;
 }
+
 .cloud {
   display: flex;
   justify-content: center;
