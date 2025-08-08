@@ -85,17 +85,16 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-weight: bold;
   margin-bottom: 35px;
 }
 .cloud img {
   width: 100px;
 }
-.cloud span {
-  margin-top: 20px;
-  font-weight: bold;
-}
 
-.footer {
+
+.bottom {
   display: flex;
   justify-content: space-between;
   gap: 6px;
