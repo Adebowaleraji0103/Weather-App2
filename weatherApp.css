@@ -28,17 +28,11 @@ form input {
   width: 180px;
   height: 30px;
 }
-form input::placeholder {
+/* form input::placeholder {
   color: #333a56;
   font-size: 12px;
-}
+} */
 
-.position {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 200px;
-}
 
 .position button {
   border: none;
