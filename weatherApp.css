@@ -6,6 +6,10 @@
 }
 body {
   background-color: #f5f8fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 header {
   border-bottom: 1px solid #333a56;
