@@ -53,6 +53,7 @@ main{
   justify-content: center;
   align-items: center;
   width: 50rem;
+
 }
 .wrapper {
   display: flex;
@@ -60,6 +61,7 @@ main{
   height: 100%;
   background-color: white;
   color: #333a56;
+  width: 300px;
   padding: 20px 25px;
   border-radius: 20px;
   box-shadow: 1px 1px 20px lightgray;
