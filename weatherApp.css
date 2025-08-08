@@ -48,6 +48,11 @@ form button {
 }
 /* --- Done with the header session --- */
 
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .wrapper {
   display: flex;
   justify-content: center;
