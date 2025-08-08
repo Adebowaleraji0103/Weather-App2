@@ -8,7 +8,7 @@ body {
   
   background-color: #F5F8FA;
 }
-nav {
+header {
    border-bottom: 1px solid #333A56;
   color: #333A56;
   display: flex;
@@ -17,15 +17,6 @@ nav {
   align-items: center;
   margin-bottom: 50px;
   font-family: "Times New Roman", Times, serif;
-}
-nav ul {
-  display: flex;
-  gap: 10px;
-  font-size: 13px;
-  list-style-type: none;
-  flex-direction: row;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 form input {
