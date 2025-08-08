@@ -42,7 +42,7 @@ form button {
   border: none;
   position: absolute;
   top: 9px;
-  right: 0;
+  right: 7px;
   display: flex;
   align-items: center;
   /* background-color: transparent; */
