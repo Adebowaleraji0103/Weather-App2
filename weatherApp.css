@@ -50,11 +50,9 @@ form button {
 }
 /* --- Done with the header session --- */
 
-.big-wrapper {
+.wrapper {
   display: flex;
   justify-content: center;
-}
-.wrapper {
   height: 100%;
   background-color: white;
   color: #333a56;
