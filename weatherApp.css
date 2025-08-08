@@ -43,9 +43,10 @@ form input::placeholder {
 form button {
   border: none;
   position: absolute;
-  top: 5px;
+  top: 6px;
   right: 7px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .big-wrapper {
