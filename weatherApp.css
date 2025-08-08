@@ -48,6 +48,7 @@ form button {
   cursor: pointer;
   background-color: transparent;
 }
+/* --- Done with the header session --- */
 
 .big-wrapper {
   display: flex;
