@@ -89,10 +89,6 @@ main{
   font-weight: bold;
   margin-bottom: 35px;
 }
-.cloud img {
-  width: 100px;
-}
-
 
 .bottom {
   display: flex;
