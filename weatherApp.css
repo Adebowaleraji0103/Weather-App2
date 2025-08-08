@@ -41,7 +41,7 @@ form button {
   right: 0;
   display: flex;
   align-items: center;
-  background-color: transparent;
+  /* background-color: transparent; */
   cursor: pointer;
 }
 
