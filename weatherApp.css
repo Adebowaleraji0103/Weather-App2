@@ -43,10 +43,8 @@ form input::placeholder {
 form button {
   border: none;
   position: absolute;
-  top: 9px;
+  top: 5px;
   right: 7px;
-  display: flex;
-  align-items: center;
   cursor: pointer;
 }
 
