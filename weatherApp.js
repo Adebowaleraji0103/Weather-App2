@@ -6,6 +6,7 @@ fetch(apiUrl)
 .then(response => response.json())
 .then(data =>{
     const cityName = data.name;
+    const temperature = data.main.temp
     console.log(data);
 })
 .catch(error => {
