@@ -13,6 +13,8 @@ fetch(apiUrl)
     console.log(`city: ${cityName}`);
     console.log(`temperature: ${temperature}`)
     console.log(`humidity: ${humidity}` )
+    console.log(`weatherCondition: ${weatherCondition}` )
+
     // console.log(data)
 
 })
