@@ -8,7 +8,7 @@ fetch(apiUrl)
     const cityName = data.name;
     const temperature = data.main.temp
     const humidity = data.main.humidity
-    console.log(data);
+    console.log();
 })
 .catch(error => {
     console.error("Error fetching weather data:",error)
