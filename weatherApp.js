@@ -9,6 +9,8 @@ fetch(apiUrl)
     const temperature = data.main.temp
     const humidity = data.main.humidity
     console.log(`city: ${cityName}`);
+    console.log(`temperature: ${temperature}`)
+    
 })
 .catch(error => {
     console.error("Error fetching weather data:",error)
