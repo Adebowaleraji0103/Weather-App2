@@ -7,6 +7,7 @@ fetch(apiUrl)
 .then(data =>{
     const cityName = data.name;
     const temperature = data.main.temp
+    const humidity = data.main.humidity
     console.log(data);
 })
 .catch(error => {
