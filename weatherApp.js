@@ -8,7 +8,7 @@ fetch(apiUrl)
     const cityName = data.name;
     const temperature = data.main.temp
     const humidity = data.main.humidity
-    const weatherCondition = 
+    const weatherCondition = data.weather[0].description
     // console.log(`city: ${cityName}`);
     // console.log(`temperature: ${temperature}`)
     // console.log(`humidity: ${humidity}` )
