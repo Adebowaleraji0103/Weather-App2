@@ -7,6 +7,6 @@ fetch(apiUrl)
 .then(data =>{
     console.log(data);
     .catch(error => {
-        console.error("hello error")
+        console.error("weather error")
     })
 })
