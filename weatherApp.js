@@ -5,7 +5,7 @@ const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=
 fetch(apiUrl)
 .then(response => response.json())
 .then(data =>{
-    const cityName = 
+    const cityName = data.name;
     console.log(data);
 })
 .catch(error => {
