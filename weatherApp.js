@@ -3,21 +3,21 @@ const city = "Lagos,NG";
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 fetch(apiUrl)
-.then(response => response.json())
-.then(data =>{
+  .then((response) => response.json())
+  .then((data) => {
     const cityName = data.name;
-    const temperature = data.main.temp
-    const humidity = data.main.humidity
-    const weatherCondition = data.weather[0].description
-    
+    const temperature = data.main.temp;
+    const humidity = data.main.humidity;
+    const weatherCondition = data.weather[0].description;
+    const feelLikeTemperature = data.main.feels_like;
+
     console.log(`city: ${cityName}`);
-    console.log(`temperature: ${temperature}`)
-    console.log(`humidity: ${humidity}` )
-    console.log(`weatherCondition: ${weatherCondition}` )
+    console.log(`temperature: ${temperature}`);
+    console.log(`humidity: ${humidity}`);
+    console.log(`weatherCondition: ${weatherCondition}`);
 
     // console.log(data)
-
-})
-.catch(error => {
-    console.error("Error fetching weather data:",error)
-})
+  })
+  .catch((error) => {
+    console.error("Error fetching weather data:", error);
+  });
