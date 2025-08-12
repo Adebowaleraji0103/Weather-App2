@@ -3,85 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Weather App</title> <!-- CHANGED: Better title -->
     <link rel="stylesheet" href="weatherApp.css" />
   </head>
   <body>
     <header>
-      <h3>My weather App</h3>
+      <h3>My Weather App</h3> <!-- CHANGED: Fixed casing -->
 
-      <form action="" id="form">
-        <input type="text" placeholder="Type city" id="input"/>
-        <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path fill="lightgray" 
-          fill-rule="evenodd" d="M11 2a9 9 0 1 0 5.618 16.032l3.675 3.675a1 1 0 0 0 1.414-1.414l-3.675-3.675A9 9 0 0 0 11 2m
-          -6 9a6 6 0 1 1 12 0a6 6 0 0 1-12 0" clip-rule="evenodd"/></svg></button>
+      <form id="form">
+        <!-- CHANGED: Removed empty 'action' since we'll handle in JS -->
+        <input type="text" placeholder="Type city" id="input" />
+        <button type="submit">
+          <!-- CHANGED: Added type="submit" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24">
+            <path fill="lightgray" fill-rule="evenodd" d="M11 2a9 9 0 1 0 5.618 16.032l3.675 3.675a1 1 0 0 0 1.414-1.414l-3.675-3.675A9 9 0 0 0 11 2m-6 9a6 6 0 1 1 12 0a6 6 0 0 1-12 0" clip-rule="evenodd"/>
+          </svg>
+        </button>
       </form>
     </header>
-    <!-- ---HEADER SESSION ENDS-- -->
 
-      <main>
-        <div class="wrapper">
-        <!-- ...........Location.......................... -->
+    <main>
+      <div class="wrapper">
+        <!-- Location -->
         <div class="location">
           <p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M10.115 21.811c.606.5 1.238.957 1.885 1.403a27 27 0 0 0 1.885-1.403a28 28 0 0 0 2.853-2.699C18.782 16.877 21 13.637 21 
-                10a9 9 0 1 0-18 0c0 3.637 2.218 6.876 4.262 9.112a28 28 0 0 0 2.853 2.7M12 13.25a3.25 3.25 0 1 1 0-6.5a3.25 3.25 0 0 1 0 6.5"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M10.115 21.811c.606.5 1.238.957 1.885 1.403a27 27 0 0 0 1.885-1.403a28 28 0 0 0 2.853-2.699C18.782 16.877 21 13.637 21 10a9 9 0 1 0-18 0c0 3.637 2.218 6.876 4.262 9.112a28 28 0 0 0 2.853 2.7M12 13.25a3.25 3.25 0 1 1 0-6.5a3.25 3.25 0 0 1 0 6.5"/>
             </svg>
           </p>
-          <p>Nigeria, NG</p>
+          <p id="city-name">Nigeria, NG</p> <!-- CHANGED: Added id for JS -->
         </div>
-<!-- ............Location sesion end...........................-->
- <!-- ........... Degree............. -->
-       <h1 class="degree">20⁰C</h1>
-<!-- ........... Degree session end.............. -->
 
-<!-- --- WEATHER SESSION --- -->
+        <!-- Degree -->
+        <h1 class="degree" id="temperature">20⁰C</h1> <!-- CHANGED: Added id -->
+
+        <!-- Weather Condition -->
         <div class="cloud">
-          <span>Cloudy</span>
-          <img src="./images/cloudd-removebg-preview.png" alt="" />
+          <span id="condition-text">Cloudy</span> <!-- CHANGED: Added id -->
+          <img id="weather-icon" src="./images/cloudd-removebg-preview.png" alt="Weather Icon" /> <!-- CHANGED: Added id & alt -->
         </div>
-<!-- --- WEATHER SESSION END --- -->
+
+        <!-- Bottom Info -->
         <div class="bottom">
-                 <!-- --- Weather Info--- -->
-          
           <div>
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" 
-              d="M12.75 1.5a.75.75 0 0 0-1.5 0v1.03a9.5 9.5 0 0 0-8.749 9.319a.67.67 0 0 0 .558.668a54.4 54.4 0 0 0 8.191.735V19a.75.
-              75 0 0 1-1.5 0v-.5a.75.75 0 0 0-1.5 0v.5a2.25 2.25 0 0 0 4.5 0v-5.748a54.4 54.4 0 0 0 8.192-.735a.67.67 0 0 0 .557-.668c-.077-4.
-              926-3.902-8.941-8.749-9.32z"/></svg></p>
-   
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12.75 1.5a.75.75 0 0 0-1.5 0v1.03a9.5 9.5 0 0 0-8.749 9.319a.67.67 0 0 0 .558.668a54.4 54.4 0 0 0 8.191.735V19a.75.75 0 0 1-1.5 0v-.5a.75.75 0 0 0-1.5 0v.5a2.25 2.25 0 0 0 4.5 0v-5.748a54.4 54.4 0 0 0 8.192-.735a.67.67 0 0 0 .557-.668c-.077-4.926-3.902-8.941-8.749-9.32z"/>
+              </svg>
+            </p>
           </div>
 
           <div>
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor"
-               d="M12 20.5q-2.91 0-4.955-2.006T5 13.61q0-1.373.555-2.628t1.487-2.24L10.87 4.99q.242-.22.534-.34q.291-.12.593-.12t.597.12t.538
-               .34l3.827 3.752q.933.985 1.487 2.24T19 13.615q0 2.882-2.045 4.884T12 20.5"/></svg></p>
-            <p>30%</p>
-            <Humidity id="Humidity"></Humidity></p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 20.5q-2.91 0-4.955-2.006T5 13.61q0-1.373.555-2.628t1.487-2.24L10.87 4.99q.242-.22.534-.34q.291-.12.593-.12t.597.12t.538.34l3.827 3.752q.933.985 1.487 2.24T19 13.615q0 2.882-2.045 4.884T12 20.5"/>
+              </svg>
+            </p>
+            <p id="humidity">30%</p> <!-- CHANGED: Added id -->
           </div>
 
           <div>
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor"
-               d="M26.492 9.493a8.6 8.6 0 0 1-2.473.678a4.35 4.35 0 0 0 1.892-2.38a8.7 8.7 0 0 1-2.734 1.043a4.308 4.308 0 0 0-7.336 
-               3.927a12.23 12.23 0 0 1-8.874-4.5a4.3 4.3 0 0 0-.583 2.165a4.3 4.3 0 0 0 1.915 3.583a4.3 4.3 0 0 1-1.95-.538v.053a4.305 4.305
-                0 0 0 3.454 4.222q-.541.148-1.134.147q-.416.002-.81-.076a4.31 4.31 0 0 0 4.022 2.99a8.7 8.7 0 0 1-6.374 1.78a12.16 12.16 0 0 0 
-                6.6 1.938c7.92 0 12.248-6.562 12.248-12.25q.001-.28-.01-.557a8.6 8.6 0 0 0 2.146-2.224"/></svg></p>
-            <p>3 km/h</p>
-           <p class="condition">Condition</p>
-          <div>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
+                <path fill="currentColor" d="M26.492 9.493a8.6 8.6 0 0 1-2.473.678a4.35 4.35 0 0 0 1.892-2.38a8.7 8.7 0 0 1-2.734 1.043a4.308 4.308 0 0 0-7.336 3.927a12.23 12.23 0 0 1-8.874-4.5a4.3 4.3 0 0 0-.583 2.165a4.3 4.3 0 0 0 1.915 3.583a4.3 4.3 0 0 1-1.95-.538v.053a4.305 4.305 0 0 0 3.454 4.222q-.541.148-1.134.147q-.416.002-.81-.076a4.31 4.31 0 0 0 4.022 2.99a8.7 8.7 0 0 1-6.374 1.78a12.16 12.16 0 0 0 6.6 1.938c7.92 0 12.248-6.562 12.248-12.25q.001-.28-.01-.557a8.6 8.6 0 0 0 2.146-2.224"/>
+              </svg>
+            </p>
+            <p id="wind-speed">3 km/h</p> <!-- CHANGED: Added id -->
+          </div>
         </div>
       </div>
-    </div>
-      </main>
+    </main>
+
     <script src="./weatherApp.js"></script>
   </body>
 </html>
