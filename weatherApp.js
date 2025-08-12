@@ -15,6 +15,7 @@ fetch(apiUrl)
     console.log(`temperature: ${temperature}`);
     console.log(`humidity: ${humidity}`);
     console.log(`weatherCondition: ${weatherCondition}`);
+     console.log(`feel-Like-Temperature ${feelLikeTemperature}`);
 
     // console.log(data)
   })
