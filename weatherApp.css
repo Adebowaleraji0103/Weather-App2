@@ -95,7 +95,7 @@ main{
 
 .bottom {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 4rem;
   font-size: 13px;
 }
