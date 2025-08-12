@@ -13,11 +13,11 @@ fetch(apiUrl)
     const weatherCondition = data.weather[0].description;
     const feelLikeTemperature = data.main.feels_like;
 
-    // console.log(`city: ${cityName}`);
-    // console.log(`temperature: ${temperature}`);
-    // console.log(`humidity: ${humidity}`);
-    // console.log(`weatherCondition: ${weatherCondition}`);
-    //  console.log(`feel-Like-Temperature ${feelLikeTemperature}`);
+    console.log(`city: ${cityName}`);
+    console.log(`temperature: ${temperature}`);
+    console.log(`humidity: ${humidity}`);
+    console.log(`weatherCondition: ${weatherCondition}`);
+     console.log(`feel-Like-Temperature ${feelLikeTemperature}`);
 
     // console.log(data)
   })
