@@ -96,6 +96,6 @@ main{
 .bottom {
   display: flex;
   justify-content: center;
-  gap: 46px;
+  gap: 4rem;
   font-size: 13px;
 }
