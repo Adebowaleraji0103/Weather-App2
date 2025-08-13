@@ -77,7 +77,7 @@ main{
 .degree {
   display: flex;
   justify-content: center;
-  font-weight: 300px;
+  font-weight: normal;
   font-size: 60px;
 }
 .cloud {
