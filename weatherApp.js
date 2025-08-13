@@ -43,7 +43,7 @@ function getWeather(city) {
 
       if (weatherDescription.includes("rain")) {
         simpleCondition = "Rainy";
-        iconPath = "./images/rainy.png";
+        iconPath = "./images/rainy.jpg";
       } else if (weatherDescription.includes("clear")) {
         simpleCondition = "Clear";
         iconPath = "./images/clear.png";
