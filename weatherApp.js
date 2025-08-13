@@ -26,45 +26,37 @@ function getWeather(city) {
       return response.json();
     })
     .then((data) => {
-      document.getElementById(
-        "city-name"
-      ).textContent = `${data.name}, ${data.sys.country}`;
-      document.getElementById(
-        "temperature"
-      ).textContent = `${data.main.temp}°C`;
-      document.getElementById(
-        "humidity"
-      ).textContent = `${data.main.humidity}%`;
+      // 🌍 Update city, temp, and humidity
+      document.getElementById("city-name").textContent = `${data.name}, ${data.sys.country}`;
+      document.getElementById("temperature").textContent = `${data.main.temp}°C`;
+      document.getElementById("humidity").textContent = `${data.main.humidity}%`;
 
-      // 🆕 CHANGE — Simplify description and set icon
-      const weatherDescription = data.weather[0].description.toLowerCase();
+      // 🆕 CHANGE — Use "main" for cleaner mapping
+      const weatherMain = data.weather[0].main.toLowerCase();
       let simpleCondition = "";
       let iconPath = "";
 
-      if (weatherDescription.includes("rain")) {
+      if (weatherMain === "rain") {
         simpleCondition = "Rainy";
         iconPath = "./images/rainy.jpg";
-      } else if (weatherDescription.includes("cloud")) {
+      } else if (weatherMain === "clouds") {
         simpleCondition = "Cloudy";
         iconPath = "./images/cloudy.png";
-      } else if (weatherDescription.includes("sunny")) {
+      } else if (weatherMain === "clear") {
         simpleCondition = "Sunny";
         iconPath = "./images/sunny.jpg";
       } else {
-        simpleCondition = "Clear"; // default
+        simpleCondition = "Clear";
         iconPath = "./images/clear.png";
       }
 
-      // Update DOM with simplified condition & icon
+      // Update condition text & icon
       document.getElementById("weather-condition").textContent = simpleCondition;
       weatherIcon.src = iconPath;
       weatherIcon.alt = simpleCondition;
 
-      // End of 🆕 CHANGE
-
-      document.getElementById(
-        "wind-speed"
-      ).textContent = `${data.wind.speed} km/h`;
+      // 🌬️ Update wind speed
+      document.getElementById("wind-speed").textContent = `${data.wind.speed} km/h`;
     })
     .catch((error) => {
       console.error("Error fetching weather data:", error);
