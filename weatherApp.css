@@ -80,10 +80,6 @@ main{
   font-weight: 300px;
   font-size: 60px;
 }
-h1 span {
-  font-weight: normal;
-}
-
 .cloud {
   display: flex;
   justify-content: center;
