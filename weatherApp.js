@@ -8,11 +8,11 @@ const weatherIcon = document.getElementById("weather-icon"); // image element fo
 
 // Event listener for form submission
 formElement.addEventListener("submit", (e) => {
-  e.preventDefault(); 
-  const city = inputElement.value.trim(); 
+  e.preventDefault();
+  const city = inputElement.value.trim();
   if (city !== "") {
     getWeather(city);
-    inputElement.value = ""; 
+    inputElement.value = "";
   }
 });
 
@@ -26,11 +26,20 @@ function getWeather(city) {
       return response.json();
     })
     .then((data) => {
-      document.getElementById("city-name").textContent = `${data.name}, ${data.sys.country}`;
-      document.getElementById("temperature").textContent = `${data.main.temp}°C`;
-      document.getElementById("humidity").textContent = `${data.main.humidity}%`;
-      document.getElementById("weather-condition").textContent = data.weather[0].description;
-      document.getElementById("wind-speed").textContent = `${data.wind.speed} km/h`;
+      document.getElementById(
+        "city-name"
+      ).textContent = `${data.name}, ${data.sys.country}`;
+      document.getElementById(
+        "temperature"
+      ).textContent = `${data.main.temp}°C`;
+      document.getElementById(
+        "humidity"
+      ).textContent = `${data.main.humidity}%`;
+      document.getElementById("weather-condition").textContent =
+        data.weather[0].description;
+      document.getElementById(
+        "wind-speed"
+      ).textContent = `${data.wind.speed} km/h`;
 
       // 🌤️ Set the weather icon from OpenWeather
       const iconCode = data.weather[0].icon; // example: "04d"
