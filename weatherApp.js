@@ -3,6 +3,7 @@ const city = "Lagos,NG";
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 formElement.addEventListener("submit", (e) => {
+    e.preventDefault();    //to stop reloading
     const city = inputElement.value;
 })
 
