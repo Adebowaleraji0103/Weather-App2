@@ -41,11 +41,6 @@ function getWeather(city) {
         "wind-speed"
       ).textContent = `${data.wind.speed} km/h`;
 
-      // 🌤️ Set the weather icon from OpenWeather
-      const iconCode = data.weather[0].icon; // example: "04d"
-      const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-      weatherIcon.src = iconUrl;
-      weatherIcon.alt = data.weather[0].description;
     })
     .catch((error) => {
       console.error("Error fetching weather data:", error);
