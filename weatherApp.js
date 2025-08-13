@@ -44,15 +44,12 @@ function getWeather(city) {
       if (weatherDescription.includes("rain")) {
         simpleCondition = "Rainy";
         iconPath = "./images/rainy.jpg";
-      } else if (weatherDescription.includes("clear")) {
-        simpleCondition = "Clear";
-        iconPath = "./images/clear.png";
       } else if (weatherDescription.includes("cloud")) {
         simpleCondition = "Cloudy";
         iconPath = "./images/cloudy.png";
       } else if (weatherDescription.includes("sunny")) {
         simpleCondition = "Sunny";
-        iconPath = "./images/sunny.png";
+        iconPath = "./images/sunny.jpg";
       } else {
         simpleCondition = "Clear"; // default
         iconPath = "./images/clear.png";
